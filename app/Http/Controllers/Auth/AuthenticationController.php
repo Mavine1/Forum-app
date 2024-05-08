@@ -9,8 +9,6 @@ use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
 class AuthenticationController extends Controller
 {
     public function register(RegisterRequest $request){
-        return response ([
-            'message' => 'Api is working '
-        ], 200);
+        $request->validated();
     }
 }
