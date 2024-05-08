@@ -12,3 +12,4 @@ Route::get('/test', function(){
         'message' => 'Api is working '
     ], 200);
 });
+Route::post('register',[])

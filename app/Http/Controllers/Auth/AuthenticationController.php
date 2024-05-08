@@ -7,5 +7,7 @@ use Illuminate\Http\Request;
 
 class AuthenticationController extends Controller
 {
-    publicn
+    public function register(){
+
+    }
 }
