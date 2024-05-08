@@ -12,8 +12,9 @@ class AuthenticationController extends Controller
         $request->validated();
 
         $userData = [
-            'name' => $request->name'
-            '
+            'name' => $request->name,
+            'username'=> $request->username,
+            'email' => $request->email
         ]
     }
 }
