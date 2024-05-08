@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
+use Illuminate\Support\Facades\Hash
 
 class AuthenticationController extends Controller
 {
@@ -14,7 +15,9 @@ class AuthenticationController extends Controller
         $userData = [
             'name' => $request->name,
             'username'=> $request->username,
-            'email' => $request->email
+            'email' => $request->email,
+            'password'=> Hash:make($request->password),
+        
         ]
     }
 }
