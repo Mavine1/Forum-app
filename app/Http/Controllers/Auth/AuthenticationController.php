@@ -10,5 +10,10 @@ class AuthenticationController extends Controller
 {
     public function register(RegisterRequest $request){
         $request->validated();
+
+        $userData = [
+            'name' => $request->name'
+            '
+        ]
     }
 }
