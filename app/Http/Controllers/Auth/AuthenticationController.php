@@ -20,6 +20,11 @@ class AuthenticationController extends Controller
             'password' => Hash::make($request->password),
         ];
         $user = User::create($userData);
-        $token => $user->createToken('forumapp')->plainTextToken;
+        $token = $user->createToken('forumapp')->plainTextToken;
+
+        return response ([
+          'user' => $user,
+          'token' => $token  
+        ], )
     }
 }
