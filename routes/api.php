@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthenticationController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -12,4 +13,4 @@ Route::get('/test', function(){
         'message' => 'Api is working '
     ], 200);
 });
-Route::post('register',[])
+Route::post('register',[AuthenticationController::class, 'register']);
