@@ -32,6 +32,7 @@ class AuthenticationController extends Controller
     {
       $request ->validated();
 
-      $user = User::whereUsername($request->username)
+      $user = User::whereUsername($request->username)->first();
+      if(!$user || Hash::check($request->password, $))
     }
 }
