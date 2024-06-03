@@ -31,5 +31,7 @@ class AuthenticationController extends Controller
     public function login(LoginRequest $request)
     {
       $request ->validated();
+
+      $user = User::whereUsername($request->username)
     }
 }
