@@ -38,7 +38,13 @@ class AuthenticationController extends Controller
             'message' =>'Invalid credentials'
         ],422); 
       }
+     
+      $token = $user->createToken('forumapp')->plainTextToken;
 
+        return response ([
+          'user' => $user,
+          'token' => $token  
+        ], 200);
          
     }
 }
