@@ -36,7 +36,9 @@ class AuthenticationController extends Controller
       if(!$user || Hash::check($request->password, $user->password)){
         return response([
             'message' =>'Invalid credentials'
-        ],422);
+        ],422); 
       }
+
+         
     }
 }
