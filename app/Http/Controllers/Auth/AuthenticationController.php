@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
 use App\models\User;
 use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
 use Illuminate\Support\Facades\Hash;
@@ -27,5 +28,8 @@ class AuthenticationController extends Controller
           'token' => $token  
         ], 201);
     }
-    public 
+    public function login(LoginRequest $request)
+    {
+      $request 
+    }
 }
