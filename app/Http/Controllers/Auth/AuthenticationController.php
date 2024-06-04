@@ -40,7 +40,7 @@ class AuthenticationController extends Controller
       }
      
       $token = $user->createToken('forumapp')->plainTextToken;
-
+// new 
         return response ([
           'user' => $user,
           'token' => $token  
