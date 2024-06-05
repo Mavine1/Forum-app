@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Requests\LoginRequest;
 use App\models\User;
-use Symfony\Component\EventDispatcher\DependencyInjection\RegisterListenersPass;
 use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
@@ -40,7 +39,7 @@ class AuthenticationController extends Controller
       }
      
       $token = $user->createToken('forumapp')->plainTextToken;
-// new 
+
         return response ([
           'user' => $user,
           'token' => $token  
@@ -48,3 +47,20 @@ class AuthenticationController extends Controller
          
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
