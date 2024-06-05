@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticationController;
+use App\Http\Controllers\Auth\FeedController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -15,4 +16,4 @@ Route::get('/test', function(){
 });
 Route::post('register',[AuthenticationController::class, 'register']);
 Route::post('login',[AuthenticationController::class, 'login']);
-Route::post('login',[AuthenticationController::class, 'login']);
+Route::post('store',[FeedController::class, 'store']);
