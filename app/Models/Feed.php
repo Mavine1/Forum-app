@@ -10,5 +10,10 @@ class Feed extends Model
     use HasFactory;
     protected $fillable = {
         'user_id',
+        'content'
+    };
+    public function user(): BelongsTo
+    {
+        return $this->
     }
 }
