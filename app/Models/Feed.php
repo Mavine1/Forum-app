@@ -14,6 +14,6 @@ class Feed extends Model
     };
     public function user(): BelongsTo
     {
-        return $this->
+        return $this->belongsTo(User::class);
     }
 }
