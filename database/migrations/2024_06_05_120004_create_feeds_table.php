@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('feeds', function (Blueprint $table) {
-            $table->bigIncrement('id');
+            $table->bigIncrements('id'); // Corrected method name
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('content');
