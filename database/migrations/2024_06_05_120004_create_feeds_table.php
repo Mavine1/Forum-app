@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('feeds', function (Blueprint $table) {
             $table->bigIncrement('id');
             $table->unsignedBigInteger('user_id');
-            $table->foreign('')
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->text('content');
             $table->timestamps();
         });
     }
