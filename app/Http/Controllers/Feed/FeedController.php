@@ -11,7 +11,7 @@ class FeedController extends Controller
     {
         $request->validated();
 
-        auth()->user()->feeds()->create([
+        auth()->user()->feeds->create([
             'content' => $request->content
         ]);
 
